@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+
+mybatis:
+  #实体类所在包
+  type-aliases-package: com.sxjf.blog.entity
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapper-locations: classpath:mybatis/*.xml
+  #加载全局的配置文件
+  #config-location: classpath:mybatis/mybatis-config.xml
