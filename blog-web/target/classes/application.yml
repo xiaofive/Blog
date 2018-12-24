@@ -1,11 +1,13 @@
+# 开发环境配置
+#service:
+#  #端口号
+#  port: 3000
+#  #项目名,如果不设定，默认为/
+#  context-path: /blog
 spring:
   profiles:
-    active: local
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?serverTimezone=UTC&useSSL=false
-    username: root
-    password: 123456
+    active: druid
+  #数据源配置 驱动配置
 
 mybatis:
   #实体类所在包
