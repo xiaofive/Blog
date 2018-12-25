@@ -22,7 +22,7 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
-        <!--一引入lombok依赖-->
+        <!--一引入lombok依赖:在类上加@Data可以省略get、set方法-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -32,13 +32,18 @@
            <groupId>mysql</groupId>
            <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--druid-springboot数据源依赖-->
+        <!--druid-springboot数据源依赖-基于druid-spring-boot-starter依赖的纯配置文件配置单数据源-->
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba</groupId>-->
+            <!--<artifactId>druid-spring-boot-starter</artifactId>-->
+            <!--<version>1.1.10</version>-->
+        <!--</dependency>-->
+        <!-- druid依赖，springboot2.0默认不支持druid连接池,所以需要手写配置类 -->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
+            <artifactId>druid</artifactId>
             <version>1.1.10</version>
         </dependency>
-
     </dependencies>
 
 </project>

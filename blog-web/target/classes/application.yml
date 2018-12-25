@@ -6,8 +6,7 @@
 #  context-path: /blog
 spring:
   profiles:
-    active: druid
-  #数据源配置 驱动配置
+    active: druids
 
 mybatis:
   #实体类所在包

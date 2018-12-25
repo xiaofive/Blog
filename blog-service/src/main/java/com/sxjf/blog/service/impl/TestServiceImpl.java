@@ -19,6 +19,13 @@ public class TestServiceImpl implements TestService {
         return "Welcome to My Blog!";
     }
 
+    /**
+    * @Description: 测试
+    * @Param: []
+    * @return: java.util.List<com.sxjf.blog.entity.TestUser>
+    * @Author: wangyang
+    * @Date: 2018/12/25
+    */
     @Override
     public List<TestUser> selectAll() {
         return testUserDao.selectAll();
