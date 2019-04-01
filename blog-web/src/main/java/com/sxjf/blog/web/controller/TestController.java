@@ -17,7 +17,7 @@ public class TestController {
     private TestService testService;
 
     @GetMapping("/welcome")
-    public String test(){return "Welcome to My Blog!";}
+    public String test(){return "Welcome to My Blog !";}
 
     @GetMapping("/testService")
     public String testService(){
