@@ -15,7 +15,7 @@ import java.sql.SQLException;
  * Date: 2018/12/25
  * Time: 13:59
  */
-@Configuration
+//@Configuration
 public class DruidDBConfig {
 
     @Value("${spring.datasource.url}")

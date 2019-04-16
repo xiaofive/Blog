@@ -14,4 +14,12 @@ public interface TestService {
     * @Date: 2018/12/25
     */
     List<TestUser> selectAll();
+    /**
+     * @Description: 测试
+     * @Param: []
+     * @return: java.util.List<com.sxjf.blog.entity.TestUser>
+     * @Author: wangyang
+     * @Date: 2018/12/25
+     */
+    List<TestUser> selectAll1();
 }

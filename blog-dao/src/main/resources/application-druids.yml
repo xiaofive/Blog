@@ -1,6 +1,7 @@
 #《基于springboot2.X,druid的多数据源配置集成，需要手写配置类，定制配置信息》
 spring:
   datasource:
+    master:
     #《一.多数据源配置》
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -21,7 +22,7 @@ spring:
       time-between-eviction-runs-millis: 60000
       #配置一个连接在池中最小生存的时间，单位是毫秒
       min-evictable-idle-time-millis: 30000
-      validationQuery: select 'x'
+      validationQuery: select 'x' FROM DUAL # <!-- oracle必须这样配置检查，不了会报检查错误+FROM DUAL -->
       testWhileIdle: true
       testOnBorrow: false
       testOnReturn: false
@@ -35,6 +36,13 @@ spring:
       connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
       # 合并多个DruidDataSource的监控数据
       #useGlobalDataSourceStat: true
+
+
+
+
+
+
+
 
 
 

@@ -11,7 +11,7 @@ import com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.shape.Shape;
  *  这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
  * 在抽象工厂模式中，接口是负责创建一个相关对象的工厂，不需要显式指定它们的类。每个生成的工厂都能按照工厂模式提供对象。
  * 详情url：http://www.runoob.com/design-pattern/abstract-factory-pattern.html
- * 测试
+ *
  * Author: wangyang
  * Date: 2018/12/10
  * Time: 14:36

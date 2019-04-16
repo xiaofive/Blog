@@ -11,4 +11,12 @@
 
     <artifactId>blog-common</artifactId>
 
+    <dependencies>
+        <!-- SpringBoot aop -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

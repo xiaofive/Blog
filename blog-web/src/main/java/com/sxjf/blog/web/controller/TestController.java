@@ -1,5 +1,6 @@
 package com.sxjf.blog.web.controller;
 
+import com.sxjf.blog.common.aspectJ.Calculation;
 import com.sxjf.blog.entity.TestUser;
 import com.sxjf.blog.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,11 @@ public class TestController {
 
     @Autowired
     private TestService testService;
+    @Autowired
+    private Calculation calculation;
 
     @GetMapping("/welcome")
-    public String test(){return "Welcome to My Blog !";}
+    public String test(){return "Welcome to My Blog!";}
 
     @GetMapping("/testService")
     public String testService(){
@@ -27,6 +30,16 @@ public class TestController {
     @GetMapping("/testDao")
     public List<TestUser> testDao(){
        return testService.selectAll();
+    }
+
+    @GetMapping("/testDao1")
+    public List<TestUser> testDao1(){
+        return testService.selectAll1();
+    }
+
+    @GetMapping("/testAop")
+    public Integer testAop(){
+        return calculation.mul(2,2);
     }
 
 }

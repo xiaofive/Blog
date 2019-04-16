@@ -16,7 +16,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)//
 @ServletComponentScan //web.xml配置
-@MapperScan(basePackages = "com.sxjf.blog.dao")//此处配置了dao接口扫描，dao层则可以省略@Mapper注解，扫描的是mapper.xml中namespace指向值的包位置
+//@MapperScan(basePackages = {"com.sxjf.blog.dao","com.sxjf.test.dao"})//此处配置了dao接口扫描，dao层则可以省略@Mapper注解，扫描的是mapper.xml中namespace指向值的包位置
 public class BlogApplication {
 
     public static void main(String[] args) {

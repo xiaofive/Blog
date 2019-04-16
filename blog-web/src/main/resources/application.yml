@@ -1,12 +1,12 @@
 # 开发环境配置
-#service:
-#  #端口号
-#  port: 3000
-#  #项目名,如果不设定，默认为/
+service:
+  #端口号
+  port: 3000
+  #项目名,如果不设定，默认为/
 #  context-path: /blog
 spring:
   profiles:
-    active: druids
+    active: druidss
 
 mybatis:
   #实体类所在包

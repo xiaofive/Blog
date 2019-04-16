@@ -4,6 +4,6 @@
 <mapper namespace="com.sxjf.blog.dao.TestUserDao" >
     <!--测试-->
     <select id="selectAll" resultType="com.sxjf.blog.entity.TestUser">
-        select * from user
+        SELECT * FROM user
     </select>
 </mapper>
