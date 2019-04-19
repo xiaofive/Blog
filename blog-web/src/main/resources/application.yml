@@ -4,8 +4,8 @@ service:
   port: 3000
   #项目名,如果不设定，默认为/
 #  context-path: /blog
-#spring:
-#  profiles:
+spring:
+  profiles:
     active: druidss
 
 mybatis:
