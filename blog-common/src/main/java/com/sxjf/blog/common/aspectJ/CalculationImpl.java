@@ -22,29 +22,31 @@ import org.springframework.stereotype.Component;
 public class CalculationImpl implements Calculation{
 
     @Override
-    @CalAnnotation("b")
+    @CalAnnotation("加法运算")
     public int add(int a, int b) {
         int result = a + b;
+        if (result < 100){
+            throw new IllegalArgumentException("运算中抛出的异常");
+        }
         return result;
     }
 
     @Override
-    @CalAnnotation("b")
+    @CalAnnotation("减法运算")
     public int sub(int a, int b) {
         int result = a - b;
         return result;
     }
 
     @Override
-    @CalAnnotation("自定义注解的值_乘法")
+    @CalAnnotation("乘法运算")
     public int mul(int a, int b) {
-        System.out.println("执行了乘法");
         int result = a * b;
         return result;
     }
 
     @Override
-    @CalAnnotation("b")
+    @CalAnnotation("除法运算")
     public int div(int a, int b) {
         int result = a / b;
         return result;

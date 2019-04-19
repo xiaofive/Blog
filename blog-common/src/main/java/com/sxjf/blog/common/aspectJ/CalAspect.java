@@ -34,8 +34,7 @@ public class CalAspect {
     */
     @Before(value = "calculationPointCut()&&@annotation(d)")
     public void doBefore(JoinPoint joinPoint,CalAnnotation d){
-        System.out.println(d.value());  //aop中获取自定义注解的值
-        System.out.println("------计算前------");
+        System.out.println("------"+d.value()+"计算前------");//aop中获取自定义注解的值
         System.out.println(joinPoint);
         System.out.println(joinPoint.getKind());
         System.out.println(joinPoint.getArgs());
@@ -44,7 +43,7 @@ public class CalAspect {
         System.out.println(joinPoint.getStaticPart());
         System.out.println(joinPoint.getTarget());
         System.out.println(joinPoint.getThis());
-        System.out.println("------计算前------");
+        System.out.println("------"+d.value()+"计算前------");
     }
 
     /**
@@ -52,9 +51,9 @@ public class CalAspect {
     * @Param: [joinPoint]
     * @return: void
     */
-    @After(value = "calculationPointCut()")
-    public void doAfter(JoinPoint joinPoint){
-        System.out.println("------计算后------");
+    @After(value = "calculationPointCut()&&@annotation(d)")
+    public void doAfter(JoinPoint joinPoint,CalAnnotation d){
+        System.out.println("------"+d.value()+"计算后------");
         System.out.println(joinPoint);
         System.out.println(joinPoint.getKind());
         System.out.println(joinPoint.getArgs());
@@ -63,7 +62,7 @@ public class CalAspect {
         System.out.println(joinPoint.getStaticPart());
         System.out.println(joinPoint.getTarget());
         System.out.println(joinPoint.getThis());
-        System.out.println("------计算后------");
+        System.out.println("------"+d.value()+"计算后------");
     }
 
     /**
@@ -74,22 +73,22 @@ public class CalAspect {
      *            两个方法
      * @return 此方法需要返回值,返回值视为目标方法的返回值
      */
-    @Around(value = "calculationPointCut()")
-    public Object around(ProceedingJoinPoint proceedingJoinPoint){
+    @Around(value = "calculationPointCut()&&@annotation(d)")
+    public Object around(ProceedingJoinPoint proceedingJoinPoint,CalAnnotation d){
         Object result = null;
         try {
-            System.out.println("环绕通知中的前置");
+            System.out.println(d.value()+"环绕通知中的前置");
             System.out.println(proceedingJoinPoint);
             System.out.println(proceedingJoinPoint.getKind());
             System.out.println(proceedingJoinPoint.getSignature());
             System.out.println(proceedingJoinPoint.getSourceLocation());
             result = proceedingJoinPoint.proceed();  //执行目标方法
-            System.out.println("环绕通知中的返回");
+            System.out.println(d.value()+"环绕通知中的返回");
         }catch (Throwable e){
-            System.out.println("环绕通知中的异常");
+            System.out.println(d.value()+"环绕通知中的异常");
         }
-        System.out.println("环绕通知中的后置");
-        return 41; //环绕通知此处返回值处理不好会报异常。返回值视为目标方法的返回值。
+        System.out.println(d.value()+"环绕通知中的后置");
+        return 3; //环绕通知此处返回值处理不好会报异常。返回值视为目标方法的返回值。
     }
 
     /**
@@ -99,10 +98,10 @@ public class CalAspect {
     * @Param: [joinPoint, result]
     * @return: void
     */
-    @AfterReturning(value = "calculationPointCut()",returning = "result")
-    public void afterReturning(JoinPoint joinPoint,Object result){
+    @AfterReturning(value = "calculationPointCut()&&@annotation(d)",returning = "result")
+    public void afterReturning(JoinPoint joinPoint,Object result,CalAnnotation d){
         String methodName = joinPoint.getSignature().getName();
-        System.out.println("The method " + methodName + " 的返回结果:" + result);
+        System.out.println("The method " + methodName + d.value() +" 的返回结果:" + result);
     }
 
     /**
@@ -114,10 +113,10 @@ public class CalAspect {
     * @Param: []
     * @return: void
     */
-    @AfterThrowing(value = "calculationPointCut()",throwing = "e")
-    public void afterThrowing(JoinPoint joinPoint,Exception e){
+    @AfterThrowing(value = "calculationPointCut()&&@annotation(d)",throwing = "e")
+    public void afterThrowing(JoinPoint joinPoint,Throwable e,CalAnnotation d){
         String methodName = joinPoint.getSignature().getName();
-        System.out.println("The method " + methodName + " 抛出的异常为:" + e);
+        System.out.println("The method " + methodName + d.value() +" 抛出的异常为:" + e);
     }
 
 }

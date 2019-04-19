@@ -4,8 +4,8 @@ service:
   port: 3000
   #项目名,如果不设定，默认为/
 #  context-path: /blog
-spring:
-  profiles:
+#spring:
+#  profiles:
     active: druidss
 
 mybatis:
@@ -15,3 +15,4 @@ mybatis:
   mapper-locations: classpath:mybatis/*.xml
   #加载全局的配置文件
   #config-location: classpath:mybatis/mybatis-config.xml
+

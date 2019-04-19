@@ -37,9 +37,24 @@ public class TestController {
         return testService.selectAll1();
     }
 
-    @GetMapping("/testAop")
-    public Integer testAop(){
+    @GetMapping("/testAopAdd")
+    public Integer testAopAdd(){
+        return calculation.add(2,2);
+    }
+
+    @GetMapping("/testAopSub")
+    public Integer testAopSub(){
+        return calculation.sub(2,2);
+    }
+
+    @GetMapping("/testAopMul")
+    public Integer testAopMul(){
         return calculation.mul(2,2);
+    }
+
+    @GetMapping("/testAopDiv")
+    public Integer testAopDiv(){
+        return calculation.div(2,0);
     }
 
 }
