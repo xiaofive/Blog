@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.SingletonPattern;
+package com.sxjf.blog.common.design.DesignPatterns.SingletonPattern;
 /**
  * Created with IntelliJ IDEA.
  * Description: 单例模式

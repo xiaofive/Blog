@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.colour;
+package com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.colour;
 /**
  * Created with IntelliJ IDEA.
  * Description: 颜色接口

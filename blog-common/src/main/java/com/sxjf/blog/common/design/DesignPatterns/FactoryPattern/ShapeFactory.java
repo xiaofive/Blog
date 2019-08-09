@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.FactoryPattern;
+package com.sxjf.blog.common.design.DesignPatterns.FactoryPattern;
 /**
  * Created with IntelliJ IDEA.
  * Description: 创建一个工厂，生成基于给定信息的实体类的对象。

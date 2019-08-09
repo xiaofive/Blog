@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.ProxyPattern.cglib;
+package com.sxjf.blog.common.design.DesignPatterns.ProxyPattern.cglib;
 
 
 public class CglibMainTest {

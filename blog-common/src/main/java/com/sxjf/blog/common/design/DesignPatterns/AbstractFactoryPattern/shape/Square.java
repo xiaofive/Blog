@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.shape;
+package com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.shape;
 
 public class Square implements Shape{
     @Override

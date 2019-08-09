@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.shape;
+package com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.shape;
 /**
  * Created with IntelliJ IDEA.
  * Description: 形状接口

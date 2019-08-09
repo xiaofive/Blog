@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.FactoryPattern;
+package com.sxjf.blog.common.design.DesignPatterns.FactoryPattern;
 /**
  * Created with IntelliJ IDEA.
  * Description: 工厂模式测试类

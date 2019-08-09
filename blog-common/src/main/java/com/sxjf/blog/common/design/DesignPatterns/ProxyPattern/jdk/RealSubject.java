@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.ProxyPattern.jdk;
+package com.sxjf.blog.common.design.DesignPatterns.ProxyPattern.jdk;
 
 /**
  * Created with IntelliJ IDEA.

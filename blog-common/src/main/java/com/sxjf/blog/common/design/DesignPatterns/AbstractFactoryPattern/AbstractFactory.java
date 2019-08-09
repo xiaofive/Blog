@@ -1,7 +1,7 @@
-package com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern;
+package com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern;
 
-import com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.colour.Colour;
-import com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.shape.Shape;
+import com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.colour.Colour;
+import com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.shape.Shape;
 
 /**
  * Created with IntelliJ IDEA.

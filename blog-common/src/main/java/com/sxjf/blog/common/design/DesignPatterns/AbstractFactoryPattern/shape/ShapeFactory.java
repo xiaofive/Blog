@@ -1,7 +1,7 @@
-package com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.shape;
+package com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.shape;
 
-import com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.AbstractFactory;
-import com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.colour.Colour;
+import com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.AbstractFactory;
+import com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.colour.Colour;
 /**
  * Created with IntelliJ IDEA.
  * Description: shape工厂

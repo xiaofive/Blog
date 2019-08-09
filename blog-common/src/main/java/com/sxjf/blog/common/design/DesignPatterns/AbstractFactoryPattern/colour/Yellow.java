@@ -1,4 +1,4 @@
-package com.sxjf.blog.common.DesignPatterns.AbstractFactoryPattern.colour;
+package com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.colour;
 
 public class Yellow implements Colour{
     @Override
