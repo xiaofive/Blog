@@ -14,7 +14,6 @@ public class EsSalesOrderHeader {
 
     String cxBillRefId;  // 客户订单号
     String incomeTerm;  // 收款协议
-    EsSalesOrderLine esSalesOrderLine;
 
     public String getInvoiceCxRefId() {
         return invoiceCxRefId;
@@ -56,11 +55,4 @@ public class EsSalesOrderHeader {
         this.incomeTerm = incomeTerm;
     }
 
-    public EsSalesOrderLine getEsSalesOrderLine() {
-        return esSalesOrderLine;
-    }
-
-    public void setEsSalesOrderLine(EsSalesOrderLine esSalesOrderLine) {
-        this.esSalesOrderLine = esSalesOrderLine;
-    }
 }

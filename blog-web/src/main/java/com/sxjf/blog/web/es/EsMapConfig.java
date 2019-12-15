@@ -1,10 +1,10 @@
 package com.sxjf.blog.web.es;
 
 import com.sxjf.blog.web.es.Entity.sales.EsSalesOrderHeader;
-import com.sxjf.blog.web.es.Entity.sales.EsSalesOrderLine;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -39,31 +39,25 @@ public class EsMapConfig {
     static String PROPERTIES = "properties";
 
 
-    public static Map<String, Object> buildEsMapping() {
+    public static Map<String, Object> buildEsMapping(List<Class> classList) {
         Map<String, Object> mapping = new HashMap<>();
-        mapping.put(PROPERTIES, getSimpleObject());
+        mapping.put(PROPERTIES, getSimpleObject(classList));
         mapping.put(DYNAMIC, "strict");   //不支持未知字段
         return mapping;
-
     }
 
-    private static Map<String, Object> getSimpleObject() {
+    private static Map<String, Object> getSimpleObject(List<Class> clsList) {
         Map<String, Object> objectMap = new HashMap<>();
-
-        Map<String, Object> saleValuetMap = getSimpleField(EsSalesOrderHeader.class, new HashMap<>());
-        objectMap.put(EsSalesOrderHeader.class.getSimpleName(), saleValuetMap);
-
-        Map<String, Object> linevalueMap = getSimpleField(EsSalesOrderLine.class, new HashMap<>());
-        objectMap.put(EsSalesOrderLine.class.getSimpleName(), linevalueMap);
+        for (Class cls : clsList) {
+            objectMap.put(cls.getSimpleName(), getSimpleField(cls, new HashMap<>()));
+        }
         return objectMap;
     }
-
 
     private static Map<String, Object> getSimpleField(Class<?> cls, Map<String, Object> fieldMap) {
         Field[] fields = cls.getDeclaredFields();
         Map<String, Object> fieldType = new HashMap<>();
         fieldType.put(MAPPING_FIELD_TYPE, KEYWORD);
-        //text.put("fields","");
         for (Field field : fields) {
             //todo
             fieldMap.put(field.getName(), fieldType);

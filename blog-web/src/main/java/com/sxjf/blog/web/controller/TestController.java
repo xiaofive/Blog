@@ -5,6 +5,8 @@ import com.sxjf.blog.common.aspectJ.Calculation;
 import com.sxjf.blog.entity.TestUser;
 import com.sxjf.blog.service.TestService;
 import com.sxjf.blog.web.es.Entity.sales.EsSalesOrderHeader;
+import com.sxjf.blog.web.es.Entity.sales.EsSalesOrderLine;
+import com.sxjf.blog.web.es.Entity.sales.EsUser;
 import com.sxjf.blog.web.es.EsMapConfig;
 import com.sxjf.blog.web.es.EsUtils;
 import org.elasticsearch.client.RestClient;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -81,7 +84,10 @@ public class TestController {
 
     @GetMapping("/testElasticsearchClient")
     public void testElasticsearch() {
-        EsMapConfig.buildEsMapping();
+        List<Class> classList = new ArrayList<>();
+        classList.add(EsSalesOrderHeader.class);
+        classList.add(EsSalesOrderLine.class);
+        EsMapConfig.buildEsMapping(classList);
     }
 
     @GetMapping("/addDocument")
@@ -120,7 +126,11 @@ public class TestController {
     @GetMapping
     public void buildMapping(){
         try {
-            EsUtils.createIndex("test_25", "构建mapping", EsMapConfig.buildEsMapping());
+            List<Class> classList = new ArrayList<>();
+            classList.add(EsSalesOrderHeader.class);
+            classList.add(EsSalesOrderLine.class);
+            classList.add(EsUser.class);
+            EsUtils.createIndex("test_29", "完善构建mapping", EsMapConfig.buildEsMapping(classList));
         } catch (Exception e) {
             System.out.println("---");
         }
