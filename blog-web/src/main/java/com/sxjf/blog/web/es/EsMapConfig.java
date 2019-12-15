@@ -72,7 +72,7 @@ public class EsMapConfig {
             getSimpleField(cls.getSuperclass(), fieldMap);
         }
         Map<String, Object> objectValueMap = new HashMap<>();
-        objectValueMap.put("properties", fieldMap);
+        objectValueMap.put(PROPERTIES, fieldMap);
         objectValueMap.put(MAPPING_FIELD_TYPE, OBJECT);
         return objectValueMap;
     }
