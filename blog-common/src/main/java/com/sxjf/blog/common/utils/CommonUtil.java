@@ -1,5 +1,8 @@
 package com.sxjf.blog.common.utils;
 
+import org.springframework.cglib.beans.BeanMap;
+
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,6 +33,16 @@ public class CommonUtil {
         boolean ipAddress = mat.find();
 
         return ipAddress;
+    }
+
+    /**
+     * 将map集合中的数据转化为指定对象的同名属性中
+     */
+    public static <T> T mapToBean(Map<String, Object> map, Class<T> clazz) throws Exception {
+        T bean = clazz.newInstance();
+        BeanMap beanMap = BeanMap.create(bean);
+        beanMap.putAll(map);
+        return bean;
     }
 
 }

@@ -7,6 +7,18 @@ server:
 spring:
   profiles:
     active: druidss
+#Ecache缓存
+  cache:
+    #ehcache配置文件路径
+    ehcache:
+      config: classpath:/ehcache.xml
+    #指定缓存类型，可加可不加
+    #type: ehcache
+
+Elasticsearch:
+    host: 39.106.80.203
+    port: 9200
+    scheme: http
 
 mybatis:
   #实体类所在包
@@ -15,4 +27,5 @@ mybatis:
   mapper-locations: classpath:mybatis/*.xml
   #加载全局的配置文件
   #config-location: classpath:mybatis/mybatis-config.xml
+
 

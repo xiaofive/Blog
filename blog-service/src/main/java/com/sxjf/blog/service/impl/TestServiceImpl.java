@@ -5,6 +5,7 @@ import com.sxjf.blog.entity.TestUser;
 import com.sxjf.blog.service.TestService;
 import com.sxjf.test.dao.TestUserDao1;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,5 +39,14 @@ public class TestServiceImpl implements TestService {
     @Override
     public List<TestUser> selectAll1() {
         return testUserDao1.selectAll();
+    }
+
+    @Override
+    @Cacheable(value = "cacheOne",key = "#key")
+    public String testCache(String key) {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("第"+i+"次调用");
+        }
+        return"testCacheOne";
     }
 }
