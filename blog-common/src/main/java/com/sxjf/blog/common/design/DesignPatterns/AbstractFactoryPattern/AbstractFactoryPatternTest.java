@@ -17,36 +17,36 @@ import com.sxjf.blog.common.design.DesignPatterns.AbstractFactoryPattern.shape.S
  * Time: 14:36
  */
 public class AbstractFactoryPatternTest {
-    public static void main(String[] args) {
-        //获取形状工厂
-        AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
-        //获取形状为Circle的对象
-        Shape shape1 = shapeFactory.getShape("Circle");
-        //调用Circle的draw方法
-        shape1.draw();
-        //获取形状为Rectangle的对象
-        Shape shape2 = shapeFactory.getShape("Rectangle");
-        //调用Rectangle的draw方法
-        shape2.draw();
-        //获取形状为Square的对象
-        Shape shape3 = shapeFactory.getShape("Square");
-        //调用Square的draw方法
-        shape3.draw();
-
-        //获取颜色工厂
-        AbstractFactory colourFactory = FactoryProducer.getFactory("COLOUR");
-        //获取Blue对象
-        Colour colour = colourFactory.getColour("Blue");
-        //调用blue的fill方法
-        colour.fill();
-        //获取Red对象
-        Colour colour1 = colourFactory.getColour("Red");
-        //调用Red的fill方法
-        colour1.fill();
-        //获取Yellow对象
-        Colour colour2 = colourFactory.getColour("Yellow");
-        //调用Yellow的fill方法
-        colour2.fill();
-
-    }
+//    public static void main(String[] args) {
+//        //获取形状工厂
+//        AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
+//        //获取形状为Circle的对象
+//        Shape shape1 = shapeFactory.getShape("Circle");
+//        //调用Circle的draw方法
+//        shape1.draw();
+//        //获取形状为Rectangle的对象
+//        Shape shape2 = shapeFactory.getShape("Rectangle");
+//        //调用Rectangle的draw方法
+//        shape2.draw();
+//        //获取形状为Square的对象
+//        Shape shape3 = shapeFactory.getShape("Square");
+//        //调用Square的draw方法
+//        shape3.draw();
+//
+//        //获取颜色工厂
+//        AbstractFactory colourFactory = FactoryProducer.getFactory("COLOUR");
+//        //获取Blue对象
+//        Colour colour = colourFactory.getColour("Blue");
+//        //调用blue的fill方法
+//        colour.fill();
+//        //获取Red对象
+//        Colour colour1 = colourFactory.getColour("Red");
+//        //调用Red的fill方法
+//        colour1.fill();
+//        //获取Yellow对象
+//        Colour colour2 = colourFactory.getColour("Yellow");
+//        //调用Yellow的fill方法
+//        colour2.fill();
+//
+//    }
 }

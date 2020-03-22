@@ -1,6 +1,5 @@
 package com.sxjf.blog.test.rest;
 
-import com.sxjf.blog.common.aspectJ.Calculation;
 import com.sxjf.blog.test.entity.User;
 import com.sxjf.blog.test.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +13,9 @@ public class TestRest {
 
     @Autowired
     private TestService testService;
-
-    @Autowired
-    private Calculation calculation;
+//
+//    @Autowired
+//    private Calculation calculation;
 
     @GetMapping("/welcome")
     public String test() {
@@ -27,25 +26,25 @@ public class TestRest {
     public User testService() {
         return testService.test();
     }
-
-    @GetMapping("/testAopAdd")
-    public Integer testAopAdd() {
-        return calculation.add(2, 2);
-    }
-
-    @GetMapping("/testAopSub")
-    public Integer testAopSub() {
-        return calculation.sub(2, 2);
-    }
-
-    @GetMapping("/testAopMul")
-    public Integer testAopMul() {
-        return calculation.mul(2, 2);
-    }
-
-    @GetMapping("/testAopDiv")
-    public Integer testAopDiv() {
-        return calculation.div(2, 0);
-    }
+//
+//    @GetMapping("/testAopAdd")
+//    public Integer testAopAdd() {
+//        return calculation.add(2, 2);
+//    }
+//
+//    @GetMapping("/testAopSub")
+//    public Integer testAopSub() {
+//        return calculation.sub(2, 2);
+//    }
+//
+//    @GetMapping("/testAopMul")
+//    public Integer testAopMul() {
+//        return calculation.mul(2, 2);
+//    }
+//
+//    @GetMapping("/testAopDiv")
+//    public Integer testAopDiv() {
+//        return calculation.div(2, 0);
+//    }
 
 }

@@ -11,6 +11,10 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+/**
+ *  Druid 数据源配置
+ *  监控页面
+ */
 @Configuration
 public class Druid {
 

@@ -96,14 +96,14 @@ public class IOUtil {
         out.close();
     }
 
-    public static void main(String[] args) {
-
-        try {
-            IOUtil.printHexByByteArray("C:\\Users\\汪洋\\Desktop\\git.txt");
-        }catch (IOException e){
-            e.fillInStackTrace();
-        }
-
-    }
+//    public static void main(String[] args) {
+//
+//        try {
+//            IOUtil.printHexByByteArray("C:\\Users\\汪洋\\Desktop\\git.txt");
+//        }catch (IOException e){
+//            e.fillInStackTrace();
+//        }
+//
+//    }
 
 }

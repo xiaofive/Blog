@@ -20,11 +20,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-        <!--SpringBoot log4j2依赖-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-log4j2</artifactId>-->
-        <!--</dependency>-->
         <!-- alibaba fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -49,17 +44,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>
             <version>1.1.2-beta5</version>
-        </dependency>
-        <!--Ecache-->
-        <!--开启 cache 缓存 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-cache</artifactId>
-        </dependency>
-        <!-- ehcache 缓存 -->
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
         </dependency>
     </dependencies>
 
