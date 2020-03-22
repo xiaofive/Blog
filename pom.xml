@@ -8,8 +8,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>blog-common</module>
-        <module>blog-dao</module>
-        <module>blog-service</module>
         <module>blog-web</module>
     </modules>
     <packaging>pom</packaging>
@@ -38,16 +36,6 @@
             <dependency>
                 <groupId>com.sxjf</groupId>
                 <artifactId>blog-common</artifactId>
-                <version>${module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sxjf</groupId>
-                <artifactId>blog-dao</artifactId>
-                <version>${module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sxjf</groupId>
-                <artifactId>blog-service</artifactId>
                 <version>${module.version}</version>
             </dependency>
             <dependency>

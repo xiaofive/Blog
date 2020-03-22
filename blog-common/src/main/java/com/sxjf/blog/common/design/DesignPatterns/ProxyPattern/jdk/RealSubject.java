@@ -16,6 +16,10 @@ public class RealSubject implements Subject{
     }
 
     @Override
+
+
+
+
     public String speak() {
         System.out.println("说话");
         return "王瑶";

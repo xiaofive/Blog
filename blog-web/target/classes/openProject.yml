@@ -1,7 +1,0 @@
-op.url: http://jyzt-test.verymro.com:8888/api/v3/work_packages
-op.username: apikey
-op.password: 345594a17bbb6d86038ceaae1cd16bd6f8db1b7b32e5372b895e8dc2ff29bc9d
-op.importUrl: http://jyzt-test.verymro.com:8888/api/v3/work_packages?pageSize=2000
-
-
-
